@@ -60,38 +60,39 @@ body {
   color: #ff6b6b;
 }
 
-.banner {
-  display: flex;
-  align-items: center;
-  margin-bottom: 30px;
-  overflow: hidden;
+.auth-section {
+  width: 400px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  /* Добавлена максимальная ширина для предотвращения захода за экран */
+  max-width: 100%; 
 }
 
-.banner-img {
-  width: 70%;
-  height: auto;
-}
-
-.banner-text {
-  padding: 26px;
-  background-color: rgba(255, 255, 255, 0.8);
+.auth-section h2 {
   text-align: center;
-  flex: 1;
-}
-
-.banner-text h2 {
-  font-size: 28px;
-  font-weight: 700;
-  margin-bottom: 10px;
-}
-
-.banner-text p {
-  font-size: 18px;
   margin-bottom: 20px;
 }
 
-.banner-button {
-  padding: 12px 24px;
+.auth-section label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.auth-section input[type="text"],
+.auth-section input[type="password"],
+.auth-section input[type="checkbox"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.auth-section button[type="submit"] {
+  padding: 10px 20px;
   background-color: #ff6b6b;
   color: #fff;
   border: none;
@@ -100,49 +101,8 @@ body {
   transition: background-color 0.3s ease;
 }
 
-.banner-button:hover {
+.auth-section button[type="submit"]:hover {
   background-color: #ff0000;
-}
-
-.popular-dishes {
-  margin-bottom: 30px;
-}
-
-.popular-dishes h2 {
-  font-size: 24px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-.popular-dishes table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 20px;
-}
-
-.popular-dishes th,
-.popular-dishes td {
-  padding: 12px;
-  text-align: left;
-  border-bottom: 1px solid #ddd;
-}
-
-.popular-dishes th {
-  background-color: #f2f2f2;
-  font-weight: 700;
-}
-
-.popular-dishes tr:nth-child(even) {
-  background-color: #f9f9f9;
-}
-
-.popular-dishes tr:hover {
-  background-color: #f1f1f1;
-}
-
-.popular-dishes td:first-child {
-  font-weight: 700;
 }
 
 footer {
@@ -150,6 +110,7 @@ footer {
   color: #fff;
   text-align: center;
   padding: 20px 0;
+  margin-top: auto; /* Добавляем автоматический верхний отступ */
 }
 
 /* Медиа-запросы */
@@ -167,25 +128,8 @@ footer {
     margin: 10px 0;
   }
 
-  .banner {
-    flex-direction: column;
+  .auth-section {
+    width: 90%;
+    margin: 20px auto;
   }
-
-  .banner-img {
-    width: 100%;
-  }
-
-  .banner-text {
-    width: 100%;
-    text-align: center;
-  }
-
-  .popular-dishes table {
-    font-size: 14px;
-  }
-}
-
-/* Добавляем стили, чтобы footer был внизу страницы */
-footer {
-  margin-top: auto; /* Добавляем автоматический верхний отступ */
 }
